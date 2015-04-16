@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E56B6B61AE0142D00DF8C1D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */; };
+		4E56B6B71AE0142D00DF8C1D /* eraser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */; };
+		4E56B6B81AE0142D00DF8C1D /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B11AE0142D00DF8C1D /* grid@2x.png */; };
+		4E56B6B91AE0142D00DF8C1D /* homeBG@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B21AE0142D00DF8C1D /* homeBG@2x.png */; };
+		4E56B6BA1AE0142D00DF8C1D /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B31AE0142D00DF8C1D /* logo@2x.png */; };
+		4E56B6BB1AE0142D00DF8C1D /* menuIcon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B41AE0142D00DF8C1D /* menuIcon@2x.png */; };
+		4E56B6BC1AE0142D00DF8C1D /* noteBookBg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B51AE0142D00DF8C1D /* noteBookBg@2x.png */; };
+		4E56B6D11AE0287300DF8C1D /* Roboto-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6BF1AE0287300DF8C1D /* Roboto-Black.ttf */; };
+		4E56B6D21AE0287300DF8C1D /* Roboto-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C01AE0287300DF8C1D /* Roboto-BlackItalic.ttf */; };
+		4E56B6D31AE0287300DF8C1D /* Roboto-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C11AE0287300DF8C1D /* Roboto-Bold.ttf */; };
+		4E56B6D41AE0287300DF8C1D /* Roboto-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C21AE0287300DF8C1D /* Roboto-BoldItalic.ttf */; };
+		4E56B6D51AE0287300DF8C1D /* Roboto-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C31AE0287300DF8C1D /* Roboto-Italic.ttf */; };
+		4E56B6D61AE0287300DF8C1D /* Roboto-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C41AE0287300DF8C1D /* Roboto-Light.ttf */; };
+		4E56B6D71AE0287300DF8C1D /* Roboto-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C51AE0287300DF8C1D /* Roboto-LightItalic.ttf */; };
+		4E56B6D81AE0287300DF8C1D /* Roboto-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C61AE0287300DF8C1D /* Roboto-Medium.ttf */; };
+		4E56B6D91AE0287300DF8C1D /* Roboto-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C71AE0287300DF8C1D /* Roboto-MediumItalic.ttf */; };
+		4E56B6DA1AE0287300DF8C1D /* Roboto-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C81AE0287300DF8C1D /* Roboto-Regular.ttf */; };
+		4E56B6DB1AE0287300DF8C1D /* Roboto-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6C91AE0287300DF8C1D /* Roboto-Thin.ttf */; };
+		4E56B6DC1AE0287300DF8C1D /* Roboto-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CA1AE0287300DF8C1D /* Roboto-ThinItalic.ttf */; };
+		4E56B6DD1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CB1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf */; };
+		4E56B6DE1AE0287300DF8C1D /* RobotoCondensed-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CC1AE0287300DF8C1D /* RobotoCondensed-BoldItalic.ttf */; };
+		4E56B6DF1AE0287300DF8C1D /* RobotoCondensed-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CD1AE0287300DF8C1D /* RobotoCondensed-Italic.ttf */; };
+		4E56B6E01AE0287300DF8C1D /* RobotoCondensed-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CE1AE0287300DF8C1D /* RobotoCondensed-Light.ttf */; };
+		4E56B6E11AE0287300DF8C1D /* RobotoCondensed-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6CF1AE0287300DF8C1D /* RobotoCondensed-LightItalic.ttf */; };
+		4E56B6E21AE0287300DF8C1D /* RobotoCondensed-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6D01AE0287300DF8C1D /* RobotoCondensed-Regular.ttf */; };
+		78B4B8751A49DDAF002B004D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B4B8741A49DDAF002B004D /* SettingsViewController.swift */; };
+		EE43D4731A14A6F200311C06 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D4721A14A6F200311C06 /* AppDelegate.swift */; };
+		EE43D4751A14A6F200311C06 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D4741A14A6F200311C06 /* ViewController.swift */; };
+		EE43D4781A14A6F200311C06 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE43D4761A14A6F200311C06 /* Main.storyboard */; };
+		EE43D47A1A14A6F200311C06 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE43D4791A14A6F200311C06 /* Images.xcassets */; };
+		EE43D47D1A14A6F200311C06 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EE43D47B1A14A6F200311C06 /* LaunchScreen.xib */; };
+		EE43D4891A14A6F200311C06 /* DrawPadTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE43D4881A14A6F200311C06 /* DrawPadTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE43D4831A14A6F200311C06 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE43D4651A14A6F200311C06 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE43D46C1A14A6F200311C06;
+			remoteInfo = DrawPad;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
+		4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser@2x.png"; sourceTree = "<group>"; };
+		4E56B6B11AE0142D00DF8C1D /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid@2x.png"; sourceTree = "<group>"; };
+		4E56B6B21AE0142D00DF8C1D /* homeBG@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "homeBG@2x.png"; sourceTree = "<group>"; };
+		4E56B6B31AE0142D00DF8C1D /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		4E56B6B41AE0142D00DF8C1D /* menuIcon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuIcon@2x.png"; sourceTree = "<group>"; };
+		4E56B6B51AE0142D00DF8C1D /* noteBookBg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "noteBookBg@2x.png"; sourceTree = "<group>"; };
+		4E56B6BF1AE0287300DF8C1D /* Roboto-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Black.ttf"; sourceTree = "<group>"; };
+		4E56B6C01AE0287300DF8C1D /* Roboto-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6C11AE0287300DF8C1D /* Roboto-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Bold.ttf"; sourceTree = "<group>"; };
+		4E56B6C21AE0287300DF8C1D /* Roboto-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6C31AE0287300DF8C1D /* Roboto-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Italic.ttf"; sourceTree = "<group>"; };
+		4E56B6C41AE0287300DF8C1D /* Roboto-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Light.ttf"; sourceTree = "<group>"; };
+		4E56B6C51AE0287300DF8C1D /* Roboto-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-LightItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6C61AE0287300DF8C1D /* Roboto-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Medium.ttf"; sourceTree = "<group>"; };
+		4E56B6C71AE0287300DF8C1D /* Roboto-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6C81AE0287300DF8C1D /* Roboto-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Regular.ttf"; sourceTree = "<group>"; };
+		4E56B6C91AE0287300DF8C1D /* Roboto-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-Thin.ttf"; sourceTree = "<group>"; };
+		4E56B6CA1AE0287300DF8C1D /* Roboto-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Roboto-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6CB1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Bold.ttf"; sourceTree = "<group>"; };
+		4E56B6CC1AE0287300DF8C1D /* RobotoCondensed-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6CD1AE0287300DF8C1D /* RobotoCondensed-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Italic.ttf"; sourceTree = "<group>"; };
+		4E56B6CE1AE0287300DF8C1D /* RobotoCondensed-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Light.ttf"; sourceTree = "<group>"; };
+		4E56B6CF1AE0287300DF8C1D /* RobotoCondensed-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-LightItalic.ttf"; sourceTree = "<group>"; };
+		4E56B6D01AE0287300DF8C1D /* RobotoCondensed-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "RobotoCondensed-Regular.ttf"; sourceTree = "<group>"; };
+		78B4B8741A49DDAF002B004D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		EE43D46D1A14A6F200311C06 /* No. 2 Stylus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No. 2 Stylus.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE43D4711A14A6F200311C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE43D4721A14A6F200311C06 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE43D4741A14A6F200311C06 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE43D4771A14A6F200311C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE43D4791A14A6F200311C06 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		EE43D47C1A14A6F200311C06 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		EE43D4821A14A6F200311C06 /* No. 2 StylusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "No. 2 StylusTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE43D4871A14A6F200311C06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE43D4881A14A6F200311C06 /* DrawPadTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawPadTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE43D46A1A14A6F200311C06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE43D47F1A14A6F200311C06 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E56B6BD1AE0287300DF8C1D /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4E56B6BE1AE0287300DF8C1D /* roboto */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		4E56B6BE1AE0287300DF8C1D /* roboto */ = {
+			isa = PBXGroup;
+			children = (
+				4E56B6BF1AE0287300DF8C1D /* Roboto-Black.ttf */,
+				4E56B6C01AE0287300DF8C1D /* Roboto-BlackItalic.ttf */,
+				4E56B6C11AE0287300DF8C1D /* Roboto-Bold.ttf */,
+				4E56B6C21AE0287300DF8C1D /* Roboto-BoldItalic.ttf */,
+				4E56B6C31AE0287300DF8C1D /* Roboto-Italic.ttf */,
+				4E56B6C41AE0287300DF8C1D /* Roboto-Light.ttf */,
+				4E56B6C51AE0287300DF8C1D /* Roboto-LightItalic.ttf */,
+				4E56B6C61AE0287300DF8C1D /* Roboto-Medium.ttf */,
+				4E56B6C71AE0287300DF8C1D /* Roboto-MediumItalic.ttf */,
+				4E56B6C81AE0287300DF8C1D /* Roboto-Regular.ttf */,
+				4E56B6C91AE0287300DF8C1D /* Roboto-Thin.ttf */,
+				4E56B6CA1AE0287300DF8C1D /* Roboto-ThinItalic.ttf */,
+				4E56B6CB1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf */,
+				4E56B6CC1AE0287300DF8C1D /* RobotoCondensed-BoldItalic.ttf */,
+				4E56B6CD1AE0287300DF8C1D /* RobotoCondensed-Italic.ttf */,
+				4E56B6CE1AE0287300DF8C1D /* RobotoCondensed-Light.ttf */,
+				4E56B6CF1AE0287300DF8C1D /* RobotoCondensed-LightItalic.ttf */,
+				4E56B6D01AE0287300DF8C1D /* RobotoCondensed-Regular.ttf */,
+			);
+			path = roboto;
+			sourceTree = "<group>";
+		};
+		4EC23B861AD6D81A00D540A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E56B6BD1AE0287300DF8C1D /* Fonts */,
+				4EC23B871AD6D81A00D540A7 /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4EC23B871AD6D81A00D540A7 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */,
+				4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */,
+				4E56B6B11AE0142D00DF8C1D /* grid@2x.png */,
+				4E56B6B21AE0142D00DF8C1D /* homeBG@2x.png */,
+				4E56B6B31AE0142D00DF8C1D /* logo@2x.png */,
+				4E56B6B41AE0142D00DF8C1D /* menuIcon@2x.png */,
+				4E56B6B51AE0142D00DF8C1D /* noteBookBg@2x.png */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		EE43D4641A14A6F200311C06 = {
+			isa = PBXGroup;
+			children = (
+				EE43D46F1A14A6F200311C06 /* DrawPad */,
+				EE43D4851A14A6F200311C06 /* DrawPadTests */,
+				EE43D46E1A14A6F200311C06 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE43D46E1A14A6F200311C06 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D46D1A14A6F200311C06 /* No. 2 Stylus.app */,
+				EE43D4821A14A6F200311C06 /* No. 2 StylusTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE43D46F1A14A6F200311C06 /* DrawPad */ = {
+			isa = PBXGroup;
+			children = (
+				4EC23B861AD6D81A00D540A7 /* Resources */,
+				EE43D4721A14A6F200311C06 /* AppDelegate.swift */,
+				EE43D4741A14A6F200311C06 /* ViewController.swift */,
+				78B4B8741A49DDAF002B004D /* SettingsViewController.swift */,
+				EE43D4761A14A6F200311C06 /* Main.storyboard */,
+				EE43D4791A14A6F200311C06 /* Images.xcassets */,
+				EE43D47B1A14A6F200311C06 /* LaunchScreen.xib */,
+				EE43D4701A14A6F200311C06 /* Supporting Files */,
+			);
+			path = DrawPad;
+			sourceTree = "<group>";
+		};
+		EE43D4701A14A6F200311C06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D4711A14A6F200311C06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EE43D4851A14A6F200311C06 /* DrawPadTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D4881A14A6F200311C06 /* DrawPadTests.swift */,
+				EE43D4861A14A6F200311C06 /* Supporting Files */,
+			);
+			path = DrawPadTests;
+			sourceTree = "<group>";
+		};
+		EE43D4861A14A6F200311C06 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EE43D4871A14A6F200311C06 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE43D46C1A14A6F200311C06 /* No. 2 Stylus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE43D48C1A14A6F200311C06 /* Build configuration list for PBXNativeTarget "No. 2 Stylus" */;
+			buildPhases = (
+				EE43D4691A14A6F200311C06 /* Sources */,
+				EE43D46A1A14A6F200311C06 /* Frameworks */,
+				EE43D46B1A14A6F200311C06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "No. 2 Stylus";
+			productName = DrawPad;
+			productReference = EE43D46D1A14A6F200311C06 /* No. 2 Stylus.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE43D4811A14A6F200311C06 /* No. 2 StylusTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE43D48F1A14A6F200311C06 /* Build configuration list for PBXNativeTarget "No. 2 StylusTests" */;
+			buildPhases = (
+				EE43D47E1A14A6F200311C06 /* Sources */,
+				EE43D47F1A14A6F200311C06 /* Frameworks */,
+				EE43D4801A14A6F200311C06 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE43D4841A14A6F200311C06 /* PBXTargetDependency */,
+			);
+			name = "No. 2 StylusTests";
+			productName = DrawPadTests;
+			productReference = EE43D4821A14A6F200311C06 /* No. 2 StylusTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE43D4651A14A6F200311C06 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = nibbee;
+				TargetAttributes = {
+					EE43D46C1A14A6F200311C06 = {
+						CreatedOnToolsVersion = 6.1;
+					};
+					EE43D4811A14A6F200311C06 = {
+						CreatedOnToolsVersion = 6.1;
+						TestTargetID = EE43D46C1A14A6F200311C06;
+					};
+				};
+			};
+			buildConfigurationList = EE43D4681A14A6F200311C06 /* Build configuration list for PBXProject "No. 2 Stylus" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE43D4641A14A6F200311C06;
+			productRefGroup = EE43D46E1A14A6F200311C06 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE43D46C1A14A6F200311C06 /* No. 2 Stylus */,
+				EE43D4811A14A6F200311C06 /* No. 2 StylusTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE43D46B1A14A6F200311C06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E56B6E11AE0287300DF8C1D /* RobotoCondensed-LightItalic.ttf in Resources */,
+				4E56B6B81AE0142D00DF8C1D /* grid@2x.png in Resources */,
+				4E56B6E21AE0287300DF8C1D /* RobotoCondensed-Regular.ttf in Resources */,
+				4E56B6D31AE0287300DF8C1D /* Roboto-Bold.ttf in Resources */,
+				4E56B6DA1AE0287300DF8C1D /* Roboto-Regular.ttf in Resources */,
+				4E56B6BA1AE0142D00DF8C1D /* logo@2x.png in Resources */,
+				4E56B6BC1AE0142D00DF8C1D /* noteBookBg@2x.png in Resources */,
+				EE43D4781A14A6F200311C06 /* Main.storyboard in Resources */,
+				4E56B6B91AE0142D00DF8C1D /* homeBG@2x.png in Resources */,
+				4E56B6D61AE0287300DF8C1D /* Roboto-Light.ttf in Resources */,
+				4E56B6D11AE0287300DF8C1D /* Roboto-Black.ttf in Resources */,
+				4E56B6DF1AE0287300DF8C1D /* RobotoCondensed-Italic.ttf in Resources */,
+				4E56B6D81AE0287300DF8C1D /* Roboto-Medium.ttf in Resources */,
+				4E56B6D51AE0287300DF8C1D /* Roboto-Italic.ttf in Resources */,
+				4E56B6B61AE0142D00DF8C1D /* avatar@2x.png in Resources */,
+				4E56B6D21AE0287300DF8C1D /* Roboto-BlackItalic.ttf in Resources */,
+				4E56B6D71AE0287300DF8C1D /* Roboto-LightItalic.ttf in Resources */,
+				4E56B6DE1AE0287300DF8C1D /* RobotoCondensed-BoldItalic.ttf in Resources */,
+				4E56B6DC1AE0287300DF8C1D /* Roboto-ThinItalic.ttf in Resources */,
+				4E56B6DB1AE0287300DF8C1D /* Roboto-Thin.ttf in Resources */,
+				EE43D47D1A14A6F200311C06 /* LaunchScreen.xib in Resources */,
+				EE43D47A1A14A6F200311C06 /* Images.xcassets in Resources */,
+				4E56B6E01AE0287300DF8C1D /* RobotoCondensed-Light.ttf in Resources */,
+				4E56B6BB1AE0142D00DF8C1D /* menuIcon@2x.png in Resources */,
+				4E56B6DD1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf in Resources */,
+				4E56B6D41AE0287300DF8C1D /* Roboto-BoldItalic.ttf in Resources */,
+				4E56B6D91AE0287300DF8C1D /* Roboto-MediumItalic.ttf in Resources */,
+				4E56B6B71AE0142D00DF8C1D /* eraser@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE43D4801A14A6F200311C06 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE43D4691A14A6F200311C06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE43D4751A14A6F200311C06 /* ViewController.swift in Sources */,
+				EE43D4731A14A6F200311C06 /* AppDelegate.swift in Sources */,
+				78B4B8751A49DDAF002B004D /* SettingsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE43D47E1A14A6F200311C06 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE43D4891A14A6F200311C06 /* DrawPadTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE43D4841A14A6F200311C06 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE43D46C1A14A6F200311C06 /* No. 2 Stylus */;
+			targetProxy = EE43D4831A14A6F200311C06 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE43D4761A14A6F200311C06 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE43D4771A14A6F200311C06 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE43D47B1A14A6F200311C06 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE43D47C1A14A6F200311C06 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE43D48A1A14A6F200311C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE43D48B1A14A6F200311C06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE43D48D1A14A6F200311C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TenPearls LLC (CLXH3E5RD8)";
+				INFOPLIST_FILE = DrawPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "No. 2 Stylus";
+				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+			};
+			name = Debug;
+		};
+		EE43D48E1A14A6F200311C06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TenPearls LLC (CLXH3E5RD8)";
+				INFOPLIST_FILE = DrawPad/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "No. 2 Stylus";
+				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+			};
+			name = Release;
+		};
+		EE43D4901A14A6F200311C06 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TenPearls LLC (CLXH3E5RD8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrawPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "No. 2 StylusTests";
+				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+				TEST_HOST = "";
+			};
+			name = Debug;
+		};
+		EE43D4911A14A6F200311C06 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Distribution: TenPearls LLC (CLXH3E5RD8)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DrawPadTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "No. 2 StylusTests";
+				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+				TEST_HOST = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE43D4681A14A6F200311C06 /* Build configuration list for PBXProject "No. 2 Stylus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE43D48A1A14A6F200311C06 /* Debug */,
+				EE43D48B1A14A6F200311C06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE43D48C1A14A6F200311C06 /* Build configuration list for PBXNativeTarget "No. 2 Stylus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE43D48D1A14A6F200311C06 /* Debug */,
+				EE43D48E1A14A6F200311C06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE43D48F1A14A6F200311C06 /* Build configuration list for PBXNativeTarget "No. 2 StylusTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE43D4901A14A6F200311C06 /* Debug */,
+				EE43D4911A14A6F200311C06 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE43D4651A14A6F200311C06 /* Project object */;
+}
