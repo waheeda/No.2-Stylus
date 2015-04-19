@@ -102,6 +102,11 @@ class SettingsViewController: UIViewController {
   override func viewWillAppear(animated: Bool) {
     super.viewWillAppear(animated)
    
+    self.navigationController?.navigationBar.barTintColor = UIColor(red: 0, green: 180/255, blue: 223/255, alpha: 1.0);
+    self.navigationController?.navigationBarHidden = false;
+  
+    
+    
     sliderBrush.value = Float(brush)
     labelBrush.text = NSString(format: "%.1f", brush.native)
     sliderOpacity.value = Float(opacity)

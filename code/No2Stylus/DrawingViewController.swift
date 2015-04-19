@@ -8,8 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class DrawingViewController: UIViewController {
 
+    @IBOutlet weak var settingsButton: UIButton!
   @IBOutlet weak var mainImageView: UIImageView!
   @IBOutlet weak var tempImageView: UIImageView!
 
@@ -20,6 +21,9 @@ class ViewController: UIViewController {
   var brushWidth: CGFloat = 10.0
   var opacity: CGFloat = 1.0
   var swiped = false
+    
+     var navigationTitle:String = "Draw";
+    
   
   let colors: [(CGFloat, CGFloat, CGFloat)] = [
     (0, 0, 0),
@@ -38,7 +42,17 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    settingsButton.alpha = 0.2;
+    
   }
+    
+  override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated);
+    
+    UINavigationBar.appearance().barTintColor = UIColor.blackColor();
+    self.navigationController?.navigationBarHidden = false;
+    self.title = self.navigationTitle;
+     }
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -140,7 +154,8 @@ class ViewController: UIViewController {
   }
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    let settingsViewController = segue.destinationViewController as SettingsViewController
+    let navigationController = segue.destinationViewController as UINavigationController
+    let settingsViewController = navigationController.topViewController as SettingsViewController
     settingsViewController.delegate = self
     settingsViewController.brush = brushWidth
     settingsViewController.opacity = opacity
@@ -151,7 +166,7 @@ class ViewController: UIViewController {
   
 }
 
-extension ViewController: SettingsViewControllerDelegate {
+extension DrawingViewController: SettingsViewControllerDelegate {
   func settingsViewControllerFinished(settingsViewController: SettingsViewController) {
     self.brushWidth = settingsViewController.brush
     self.opacity = settingsViewController.opacity
