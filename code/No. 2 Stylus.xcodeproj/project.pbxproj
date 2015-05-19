@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4E03E3B71AE3B6FE004F48DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */; };
+		4E18E4F91B0B933D00B62E2D /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */; };
+		4E18E4FC1B0B98FD00B62E2D /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */; };
+		4E18E5061B0B9CD500B62E2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E18E5051B0B9CD500B62E2D /* UIKit.framework */; };
+		4E18E5081B0B9CEE00B62E2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E18E5071B0B9CEE00B62E2D /* Foundation.framework */; };
 		4E56B6B61AE0142D00DF8C1D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */; };
 		4E56B6B71AE0142D00DF8C1D /* eraser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */; };
 		4E56B6B81AE0142D00DF8C1D /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B11AE0142D00DF8C1D /* grid@2x.png */; };
@@ -54,6 +58,13 @@
 
 /* Begin PBXFileReference section */
 		4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		4E18E4F51B0B933D00B62E2D /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
+		4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
+		4E18E4F71B0B933D00B62E2D /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
+		4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
+		4E18E5021B0B9B2000B62E2D /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E18E5051B0B9CD500B62E2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4E18E5071B0B9CEE00B62E2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser@2x.png"; sourceTree = "<group>"; };
 		4E56B6B11AE0142D00DF8C1D /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid@2x.png"; sourceTree = "<group>"; };
@@ -97,6 +108,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E18E5081B0B9CEE00B62E2D /* Foundation.framework in Frameworks */,
+				4E18E5061B0B9CD500B62E2D /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,6 +139,25 @@
 				4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4E18E4F31B0B933D00B62E2D /* ExternalLibraries */ = {
+			isa = PBXGroup;
+			children = (
+				4E18E4F41B0B933D00B62E2D /* ACEDrawingView */,
+			);
+			path = ExternalLibraries;
+			sourceTree = "<group>";
+		};
+		4E18E4F41B0B933D00B62E2D /* ACEDrawingView */ = {
+			isa = PBXGroup;
+			children = (
+				4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */,
+				4E18E4F51B0B933D00B62E2D /* ACEDrawingTools.h */,
+				4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */,
+				4E18E4F71B0B933D00B62E2D /* ACEDrawingView.h */,
+			);
+			path = ACEDrawingView;
 			sourceTree = "<group>";
 		};
 		4E56B6BD1AE0287300DF8C1D /* Fonts */ = {
@@ -187,6 +219,8 @@
 		EE43D4641A14A6F200311C06 = {
 			isa = PBXGroup;
 			children = (
+				4E18E5071B0B9CEE00B62E2D /* Foundation.framework */,
+				4E18E5051B0B9CD500B62E2D /* UIKit.framework */,
 				EE43D46F1A14A6F200311C06 /* No2Stylus */,
 				EE43D4851A14A6F200311C06 /* No2StylusTests */,
 				EE43D46E1A14A6F200311C06 /* Products */,
@@ -205,6 +239,7 @@
 		EE43D46F1A14A6F200311C06 /* No2Stylus */ = {
 			isa = PBXGroup;
 			children = (
+				4E18E4F31B0B933D00B62E2D /* ExternalLibraries */,
 				4E03E3B51AE3B59B004F48DE /* Controllers */,
 				4E03E3B41AE3B58B004F48DE /* AppDelegate */,
 				4EC23B861AD6D81A00D540A7 /* Resources */,
@@ -212,6 +247,7 @@
 				EE43D4791A14A6F200311C06 /* Images.xcassets */,
 				EE43D47B1A14A6F200311C06 /* LaunchScreen.xib */,
 				EE43D4701A14A6F200311C06 /* Supporting Files */,
+				4E18E5021B0B9B2000B62E2D /* Objective-C-Bridging-Header.h */,
 			);
 			path = No2Stylus;
 			sourceTree = "<group>";
@@ -368,6 +404,8 @@
 			files = (
 				EE43D4751A14A6F200311C06 /* DrawingViewController.swift in Sources */,
 				EE43D4731A14A6F200311C06 /* AppDelegate.swift in Sources */,
+				4E18E4F91B0B933D00B62E2D /* ACEDrawingTools.m in Sources */,
+				4E18E4FC1B0B98FD00B62E2D /* ACEDrawingView.m in Sources */,
 				78B4B8751A49DDAF002B004D /* SettingsViewController.swift in Sources */,
 				4E03E3B71AE3B6FE004F48DE /* HomeViewController.swift in Sources */,
 			);
@@ -497,6 +535,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "No. 2 Stylus";
 				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/Objective-C-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -509,6 +548,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "No. 2 Stylus";
 				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
+				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/Objective-C-Bridging-Header.h";
 			};
 			name = Release;
 		};

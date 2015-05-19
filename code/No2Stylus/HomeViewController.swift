@@ -16,6 +16,7 @@ class HomeViewController: UIViewController {
     }
     
     var selectedPaperType:String = "" ;
+    var paperType:PaperType = PaperType.Sketch;
     
     let segueIdentifier = "openDrawingController";
     
@@ -29,18 +30,9 @@ class HomeViewController: UIViewController {
     
         var tag = sender.tag;
         
-        var paperType:PaperType = PaperType(rawValue: tag!)!;
+        paperType = PaperType(rawValue: tag!)!;
         
-        switch paperType {
         
-        case .Sketch:
-            selectedPaperType = "Sketch"
-        case .Write:
-           selectedPaperType = "Write"
-        case .Grid:
-           selectedPaperType = "Grid"
-        
-        }
         
         self.performSegueWithIdentifier(self.segueIdentifier, sender: sender);
         
@@ -50,7 +42,26 @@ class HomeViewController: UIViewController {
     if(segue.identifier == self.segueIdentifier) {
     
         var drawingController:DrawingViewController = segue.destinationViewController as DrawingViewController;
+        var imageName:String = ""
+        
+        switch paperType {
+            
+        case .Sketch:
+            selectedPaperType = "Sketch"
+            imageName = ""
+        case .Write:
+            selectedPaperType = "Write"
+            imageName = "noteBookBg"
+        case .Grid:
+            selectedPaperType = "Grid"
+            imageName = "grid"
+            
+        }
+        
+        
         drawingController.navigationTitle = selectedPaperType;
+        drawingController.imageName = imageName;
+       
         
     }
     }
