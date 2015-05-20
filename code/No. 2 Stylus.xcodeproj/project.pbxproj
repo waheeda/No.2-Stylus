@@ -12,6 +12,8 @@
 		4E18E4FC1B0B98FD00B62E2D /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */; };
 		4E18E5061B0B9CD500B62E2D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E18E5051B0B9CD500B62E2D /* UIKit.framework */; };
 		4E18E5081B0B9CEE00B62E2D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E18E5071B0B9CEE00B62E2D /* Foundation.framework */; };
+		4E2297FE1B0CE71F005CB46E /* ColorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E2297FD1B0CE71F005CB46E /* ColorView.swift */; };
+		4E2298051B0CF54E005CB46E /* NSObject+Swift.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E2298041B0CF54E005CB46E /* NSObject+Swift.m */; };
 		4E56B6B61AE0142D00DF8C1D /* avatar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */; };
 		4E56B6B71AE0142D00DF8C1D /* eraser@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */; };
 		4E56B6B81AE0142D00DF8C1D /* grid@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E56B6B11AE0142D00DF8C1D /* grid@2x.png */; };
@@ -62,9 +64,12 @@
 		4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
 		4E18E4F71B0B933D00B62E2D /* ACEDrawingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingView.h; sourceTree = "<group>"; };
 		4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingView.m; sourceTree = "<group>"; };
-		4E18E5021B0B9B2000B62E2D /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
 		4E18E5051B0B9CD500B62E2D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4E18E5071B0B9CEE00B62E2D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4E2297FD1B0CE71F005CB46E /* ColorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorView.swift; sourceTree = "<group>"; };
+		4E2298001B0CF54E005CB46E /* Objective-C-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Objective-C-Bridging-Header.h"; sourceTree = "<group>"; };
+		4E2298031B0CF54E005CB46E /* NSObject+Swift.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swift.h"; sourceTree = "<group>"; };
+		4E2298041B0CF54E005CB46E /* NSObject+Swift.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swift.m"; sourceTree = "<group>"; };
 		4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "avatar@2x.png"; sourceTree = "<group>"; };
 		4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "eraser@2x.png"; sourceTree = "<group>"; };
 		4E56B6B11AE0142D00DF8C1D /* grid@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "grid@2x.png"; sourceTree = "<group>"; };
@@ -137,6 +142,7 @@
 				EE43D4741A14A6F200311C06 /* DrawingViewController.swift */,
 				78B4B8741A49DDAF002B004D /* SettingsViewController.swift */,
 				4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */,
+				4E2297FD1B0CE71F005CB46E /* ColorView.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -158,6 +164,23 @@
 				4E18E4F71B0B933D00B62E2D /* ACEDrawingView.h */,
 			);
 			path = ACEDrawingView;
+			sourceTree = "<group>";
+		};
+		4E2297FF1B0CF54E005CB46E /* BridgingHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				4E2298001B0CF54E005CB46E /* Objective-C-Bridging-Header.h */,
+			);
+			path = BridgingHeaders;
+			sourceTree = "<group>";
+		};
+		4E2298021B0CF54E005CB46E /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				4E2298031B0CF54E005CB46E /* NSObject+Swift.h */,
+				4E2298041B0CF54E005CB46E /* NSObject+Swift.m */,
+			);
+			path = Categories;
 			sourceTree = "<group>";
 		};
 		4E56B6BD1AE0287300DF8C1D /* Fonts */ = {
@@ -239,6 +262,8 @@
 		EE43D46F1A14A6F200311C06 /* No2Stylus */ = {
 			isa = PBXGroup;
 			children = (
+				4E2297FF1B0CF54E005CB46E /* BridgingHeaders */,
+				4E2298021B0CF54E005CB46E /* Categories */,
 				4E18E4F31B0B933D00B62E2D /* ExternalLibraries */,
 				4E03E3B51AE3B59B004F48DE /* Controllers */,
 				4E03E3B41AE3B58B004F48DE /* AppDelegate */,
@@ -247,7 +272,6 @@
 				EE43D4791A14A6F200311C06 /* Images.xcassets */,
 				EE43D47B1A14A6F200311C06 /* LaunchScreen.xib */,
 				EE43D4701A14A6F200311C06 /* Supporting Files */,
-				4E18E5021B0B9B2000B62E2D /* Objective-C-Bridging-Header.h */,
 			);
 			path = No2Stylus;
 			sourceTree = "<group>";
@@ -404,6 +428,8 @@
 			files = (
 				EE43D4751A14A6F200311C06 /* DrawingViewController.swift in Sources */,
 				EE43D4731A14A6F200311C06 /* AppDelegate.swift in Sources */,
+				4E2297FE1B0CE71F005CB46E /* ColorView.swift in Sources */,
+				4E2298051B0CF54E005CB46E /* NSObject+Swift.m in Sources */,
 				4E18E4F91B0B933D00B62E2D /* ACEDrawingTools.m in Sources */,
 				4E18E4FC1B0B98FD00B62E2D /* ACEDrawingView.m in Sources */,
 				78B4B8751A49DDAF002B004D /* SettingsViewController.swift in Sources */,
@@ -534,8 +560,8 @@
 				INFOPLIST_FILE = No2Stylus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "No. 2 Stylus";
-				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
-				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/Objective-C-Bridging-Header.h";
+				PROVISIONING_PROFILE = "01800c83-ae46-4cb7-9715-42c55fa28892";
+				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/BridgingHeaders/Objective-C-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -547,8 +573,8 @@
 				INFOPLIST_FILE = No2Stylus/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "No. 2 Stylus";
-				PROVISIONING_PROFILE = "c6271f05-0176-4ea0-a1ae-6fdf426991ea";
-				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/Objective-C-Bridging-Header.h";
+				PROVISIONING_PROFILE = "01800c83-ae46-4cb7-9715-42c55fa28892";
+				SWIFT_OBJC_BRIDGING_HEADER = "No2Stylus/BridgingHeaders/Objective-C-Bridging-Header.h";
 			};
 			name = Release;
 		};

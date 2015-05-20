@@ -10,12 +10,14 @@ import UIKit
 
 class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
 
+    @IBOutlet weak var autoLayoutConstraintForScrollViewBottom: NSLayoutConstraint!
     @IBOutlet  var navUndoButton: UIBarButtonItem!
     @IBOutlet  var navBackButton: UIBarButtonItem!
     @IBOutlet weak var settingsButton: UIButton!
   @IBOutlet weak var mainImageView: UIImageView!
   @IBOutlet weak var tempImageView: UIImageView!
 
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var drawingView: ACEDrawingView!
   var lastPoint = CGPoint.zeroPoint
   var red: CGFloat = 0.0
@@ -44,15 +46,73 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     (1.0, 1.0, 1.0),
   ]
 
+    @IBAction func onEraserButtonClick(sender: AnyObject) {
+        
+        self.drawingView.drawTool = ACEDrawingToolTypeEraser;
+    }
+    @IBAction func onColorsButtonClick(sender: AnyObject) {
+        
+       showColorSelector()
+        
+    }
+    
+    func showColorSelector() {
+        self.autoLayoutConstraintForScrollViewBottom.constant = 0
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            
+            }, completion: { finished in
+                
+        })
+    }
+    
+    func hideColorSelector() {
+        self.autoLayoutConstraintForScrollViewBottom.constant = -scrollView.frame.size.height
+        
+        UIView.animateWithDuration(0.2, delay: 0.0, options: .CurveEaseOut, animations: {
+            self.view.layoutIfNeeded()
+            
+            }, completion: { finished in
+                
+        })
+    }
+    
+    
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
     settingsButton.alpha = 0.2;
      mainImageView.image = UIImage(named: imageName);
     self.drawingView.delegate = self;
+   
     
   }
     
+    override func viewDidAppear(animated: Bool) {
+         autoLayoutConstraintForScrollViewBottom.constant = -scrollView.frame.size.height;
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        var index = 0
+        
+        for view in self.scrollView.subviews{
+            var r:CGFloat = 0.0;
+            var g:CGFloat = 0.0;
+            var b: CGFloat = 0.0;
+            (r,g,b) = colors[index]
+            var color:UIColor = UIColor(red: r, green: g, blue: b, alpha: 1.0)
+            if let subview = view as? ColorView {
+                subview.setViewTag(index)
+                subview.setBackgroundColorOfView(color)
+                subview.onTapTarget = self
+                index++
+            }
+            
+            
+        }
+    }
   override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
     
@@ -80,6 +140,10 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
         }else {
         self.navigationItem.leftBarButtonItem = self.navBackButton
         }
+    }
+    
+    func  drawingView(view: ACEDrawingView!, willBeginDrawUsingTool tool: ACEDrawingTool!) {
+       hideColorSelector()
     }
     
     // MARK: - Actions
@@ -111,6 +175,8 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
   
   @IBAction func pencilPressed(sender: AnyObject) {
     
+    hideColorSelector()
+    
     isEraserSelected = false
     
     var index = sender.tag ?? 0
@@ -122,20 +188,15 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     
     self.drawingView.drawTool = ACEDrawingToolTypePen;
     self.drawingView.lineColor = UIColor(red: red, green: green, blue: blue, alpha: opacity);
-    
-    if index == colors.count - 1 {
-//      opacity = 1.0
-//        isEraserSelected = true
-         self.drawingView.drawTool = ACEDrawingToolTypeEraser;
-    }
+
   }
   
-  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-    swiped = false
-    if let touch = touches.anyObject() as? UITouch {
-      lastPoint = touch.locationInView(self.view)
-    }
-  }
+//  override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
+//    swiped = false
+//    if let touch = touches.anyObject() as? UITouch {
+//      lastPoint = touch.locationInView(self.view)
+//    }
+//  }
   
 //  func drawLineFrom(fromPoint: CGPoint, toPoint: CGPoint) {
 //    

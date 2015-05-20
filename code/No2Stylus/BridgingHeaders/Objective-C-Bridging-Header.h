@@ -9,3 +9,4 @@
 
 #import "ACEDrawingView.h"
 #import "ACEDrawingTools.h"
+#import "NSObject+Swift.h"
