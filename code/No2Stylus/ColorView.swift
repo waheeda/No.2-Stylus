@@ -11,11 +11,13 @@ import Foundation
 class ColorView:UIView {
     
 
-     var onTapTarget: DrawingViewController?
+     var onTapTarget: UIViewController?
+    var selector: Selector = ""
     
     override func awakeFromNib() {
         var tapGestureRecognizer:UITapGestureRecognizer = UITapGestureRecognizer(target: self, action:Selector( "onTap") )
         self.addGestureRecognizer(tapGestureRecognizer)
+        self.setTranslatesAutoresizingMaskIntoConstraints(false)
     }
     
     func setBackgroundColorOfView(color: UIColor) {
@@ -28,11 +30,11 @@ class ColorView:UIView {
     
     func onTap() {
         
-        UIView.animateWithDuration(0.05, delay: 0.0, options: .CurveEaseOut, animations: {
+        UIView.animateWithDuration(0.1, delay: 0.0, options: .CurveEaseOut, animations: {
             self.transform = CGAffineTransformMakeScale(1.01, 1.01)
             self.alpha = 0.8
             }, completion: { finished in
-                UIView.animateWithDuration(0.05, delay: 0.1, options: nil, animations: {
+                UIView.animateWithDuration(0.1, delay: 0.1, options: nil, animations: {
                        self.transform = CGAffineTransformMakeScale(1, 1)
                     self.alpha = 1
                     }, completion: { finished in
@@ -45,8 +47,10 @@ class ColorView:UIView {
     }
     
     func notifyTarget() {
-    onTapTarget?.pencilPressed(self)
+    //onTapTarget?.pencilPressed(self)
+        onTapTarget?.swift_performSelector(selector, withObject: self)
     }
  
+    
     
 }

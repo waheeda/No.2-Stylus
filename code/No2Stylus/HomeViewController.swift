@@ -8,14 +8,13 @@
 
 import UIKit
 
+enum PaperType: Int {
+    case Sketch = 1, Write, Grid;
+}
 
 class HomeViewController: UIViewController {
 
-    enum PaperType: Int {
-         case Sketch = 1, Write, Grid;
-    }
-    
-    var selectedPaperType:String = "" ;
+     var selectedPaperType:String = "" ;
     var paperType:PaperType = PaperType.Sketch;
     
     let segueIdentifier = "openDrawingController";
@@ -42,25 +41,7 @@ class HomeViewController: UIViewController {
     if(segue.identifier == self.segueIdentifier) {
     
         var drawingController:DrawingViewController = segue.destinationViewController as DrawingViewController;
-        var imageName:String = ""
-        
-        switch paperType {
-            
-        case .Sketch:
-            selectedPaperType = "Sketch"
-            imageName = ""
-        case .Write:
-            selectedPaperType = "Write"
-            imageName = "noteBookBg"
-        case .Grid:
-            selectedPaperType = "Grid"
-            imageName = "grid"
-            
-        }
-        
-        
-        drawingController.navigationTitle = selectedPaperType;
-        drawingController.imageName = imageName;
+        drawingController.paperType = paperType;
        
         
     }

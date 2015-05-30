@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E035FFC1B19DE9F007DF54B /* colorIcon.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4E035FFB1B19DE9F007DF54B /* colorIcon.jpg */; };
 		4E03E3B71AE3B6FE004F48DE /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */; };
 		4E18E4F91B0B933D00B62E2D /* ACEDrawingTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */; };
 		4E18E4FC1B0B98FD00B62E2D /* ACEDrawingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E18E4FB1B0B98FD00B62E2D /* ACEDrawingView.m */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E035FFB1B19DE9F007DF54B /* colorIcon.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = colorIcon.jpg; sourceTree = "<group>"; };
 		4E03E3B61AE3B6FE004F48DE /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4E18E4F51B0B933D00B62E2D /* ACEDrawingTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ACEDrawingTools.h; sourceTree = "<group>"; };
 		4E18E4F61B0B933D00B62E2D /* ACEDrawingTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ACEDrawingTools.m; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		4EC23B871AD6D81A00D540A7 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				4E035FFB1B19DE9F007DF54B /* colorIcon.jpg */,
 				4E56B6AF1AE0142D00DF8C1D /* avatar@2x.png */,
 				4E56B6B01AE0142D00DF8C1D /* eraser@2x.png */,
 				4E56B6B11AE0142D00DF8C1D /* grid@2x.png */,
@@ -408,6 +411,7 @@
 				4E56B6DD1AE0287300DF8C1D /* RobotoCondensed-Bold.ttf in Resources */,
 				4E56B6D41AE0287300DF8C1D /* Roboto-BoldItalic.ttf in Resources */,
 				4E56B6D91AE0287300DF8C1D /* Roboto-MediumItalic.ttf in Resources */,
+				4E035FFC1B19DE9F007DF54B /* colorIcon.jpg in Resources */,
 				4E56B6B71AE0142D00DF8C1D /* eraser@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

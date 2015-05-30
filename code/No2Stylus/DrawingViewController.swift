@@ -10,12 +10,15 @@ import UIKit
 
 class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
 
+    @IBOutlet weak var logoImage: UIImageView!
+    @IBOutlet weak var drawingParentView: UIView!
     @IBOutlet weak var autoLayoutConstraintForScrollViewBottom: NSLayoutConstraint!
     @IBOutlet  var navUndoButton: UIBarButtonItem!
     @IBOutlet  var navBackButton: UIBarButtonItem!
     @IBOutlet weak var settingsButton: UIButton!
   @IBOutlet weak var mainImageView: UIImageView!
   @IBOutlet weak var tempImageView: UIImageView!
+    @IBOutlet weak var eraserButton: UIButton!
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var drawingView: ACEDrawingView!
@@ -30,19 +33,22 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     
      var navigationTitle:String = "Draw";
     var imageName:String = "";
+    var paperType:PaperType = PaperType.Sketch;
     
   
   let colors: [(CGFloat, CGFloat, CGFloat)] = [
-    (0, 0, 0),
-    (105.0 / 255.0, 105.0 / 255.0, 105.0 / 255.0),
+    
+    
     (1.0, 0, 0),
     (0, 0, 1.0),
     (51.0 / 255.0, 204.0 / 255.0, 1.0),
     (102.0 / 255.0, 204.0 / 255.0, 0),
     (102.0 / 255.0, 1.0, 0),
+    (105.0 / 255.0, 105.0 / 255.0, 105.0 / 255.0),
     (160.0 / 255.0, 82.0 / 255.0, 45.0 / 255.0),
     (1.0, 102.0 / 255.0, 0),
     (1.0, 1.0, 0),
+    (0, 0, 0),
     (1.0, 1.0, 1.0),
   ]
 
@@ -85,7 +91,9 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     settingsButton.alpha = 0.2;
      mainImageView.image = UIImage(named: imageName);
     self.drawingView.delegate = self;
-   
+    eraserButton.layer.cornerRadius = 25;
+//    logoImage.alpha = 0.5;
+    logoImage.hidden = true;
     
   }
     
@@ -95,6 +103,11 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        self.setColorsInScrollView()
+    }
+    
+    func setColorsInScrollView() {
+    
         var index = 0
         
         for view in self.scrollView.subviews{
@@ -107,15 +120,17 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
                 subview.setViewTag(index)
                 subview.setBackgroundColorOfView(color)
                 subview.onTapTarget = self
+                subview.selector = Selector("pencilPressed:");
                 index++
             }
             
             
         }
     }
+    
   override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated);
-    
+    self.customizeBasedOnSelectedPaperType()
     UINavigationBar.appearance().barTintColor = UIColor.blackColor();
     self.navigationController?.navigationBarHidden = false;
     self.navigationItem.hidesBackButton = true
@@ -123,6 +138,32 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     
     updateButtonsStatus()
      }
+    
+    func customizeBasedOnSelectedPaperType() {
+    
+        var imageName:String = ""
+        var selectedPaperType: String = ""
+        
+        switch paperType {
+            
+        case .Sketch:
+            selectedPaperType = "Sketch"
+            imageName = ""
+        case .Write:
+            selectedPaperType = "Write"
+            imageName = "noteBookBg"
+        case .Grid:
+            selectedPaperType = "Grid"
+            imageName = "grid"
+            
+        }
+        
+        
+        self.navigationTitle = selectedPaperType;
+        self.imageName = imageName;
+         mainImageView.image = UIImage(named: imageName);
+    }
+    
 
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
@@ -163,11 +204,15 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
   }
 
   @IBAction func share(sender: AnyObject) {
-    UIGraphicsBeginImageContext(mainImageView.bounds.size)
-    mainImageView.image?.drawInRect(CGRect(x: 0, y: 0, 
-      width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
+    
+    logoImage.hidden = false;
+    UIGraphicsBeginImageContext(drawingParentView.bounds.size)
+    drawingParentView.layer.renderInContext(UIGraphicsGetCurrentContext())
+//    drawingParentView?.drawInRect(CGRect(x: 0, y: 0,
+//      width: mainImageView.frame.size.width, height: mainImageView.frame.size.height))
     let image = UIGraphicsGetImageFromCurrentImageContext()
     UIGraphicsEndImageContext()
+    logoImage.hidden = true;
      
     let activity = UIActivityViewController(activityItems: [image], applicationActivities: nil)
     presentViewController(activity, animated: true, completion: nil)
@@ -175,6 +220,7 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
   
   @IBAction func pencilPressed(sender: AnyObject) {
     
+    self.drawingView.drawTool = ACEDrawingToolTypePen;
     hideColorSelector()
     
     isEraserSelected = false
@@ -186,7 +232,7 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
     
     (red, green, blue) = colors[index]
     
-    self.drawingView.drawTool = ACEDrawingToolTypePen;
+    
     self.drawingView.lineColor = UIColor(red: red, green: green, blue: blue, alpha: opacity);
 
   }
@@ -279,6 +325,12 @@ class DrawingViewController: UIViewController, ACEDrawingViewDelegate {
 
 extension DrawingViewController: SettingsViewControllerDelegate {
   func settingsViewControllerFinished(settingsViewController: SettingsViewController) {
+    
+    if self.red != settingsViewController.red || self.green != settingsViewController.green || self.blue != settingsViewController.blue {
+        
+        self.drawingView.drawTool = ACEDrawingToolTypePen;
+    }
+    
     self.brushWidth = settingsViewController.brush
     self.opacity = settingsViewController.opacity
     self.red = settingsViewController.red
@@ -286,6 +338,8 @@ extension DrawingViewController: SettingsViewControllerDelegate {
     self.blue = settingsViewController.blue
     
     
+    
+    self.paperType = settingsViewController.paperType;
     self.drawingView.lineAlpha = self.opacity
     self.drawingView.lineWidth = self.brushWidth
      self.drawingView.lineColor = UIColor(red: red, green: green, blue: blue, alpha: opacity);
